@@ -1,0 +1,363 @@
+@import url(`https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap`);
+@import url(`https://fonts.googleapis.com/css?family=Muli&display=swap`);
+
+*,*:before, *:after{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    /* transition: background 0.2s linear; */
+    /* display: flex;
+    align-items: center; */
+    background: #f7f0e9;
+    transition: .6s;
+   
+}
+.wraper{
+  background:url(../assets/img/polynesia-3021072_1920.jpg);
+  height: 100%;
+  width: 100%;
+  /* background: bisque; */
+}
+
+/* Podstawowe styli */
+/* ********Burger *****/
+
+.container{
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0px 10px;
+}
+
+
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 20;
+
+
+}
+.header:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #8963d1;
+    z-index: 2;
+}
+
+
+.heder_body{
+position: relative;
+
+display: flex;
+justify-content: space-between;
+height: 80px;
+align-items: center;
+}
+.header_logo{
+flex: 0 0 60px;
+border-radius: 50px;
+overflow: hidden;
+position: relative;
+z-index: 3;
+
+}
+.header_logo img{
+    max-width: 100%;
+    display: block;
+
+}
+
+.header_burger{
+display: none;
+}
+/* .header_menu{
+
+} */
+.header_list {
+    display: flex;
+    position: relative;
+    z-index: 2;
+}
+
+.header_list li {
+    list-style: none;
+    margin: 0px 0px 0px 20px;
+
+
+}
+
+.header_link {
+    color: white;
+    text-transform: uppercase;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+@media ( max-width: 767px){
+    body.lock{
+        overflow: hidden;
+
+    }
+   .heder_body{
+       height: 50px;
+   }
+   .header_logo{
+       flex: 0 0 40;
+   }
+    .header_burger {
+display: block;
+position: relative;
+width: 30px;
+height: 20px;
+position: relative;
+z-index: 3;
+   }
+   .header_burger span{
+       position: absolute;
+       background-color:white;
+       position: absolute;
+       left: 0;
+       width: 100%;
+       height: 2px;
+       top: 9px;
+       transition: all 0.3s ease 0s;
+   }
+   .header_burger:before,
+    .header_burger:after{
+        content: '';
+        background-color: white;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+    }
+    .header_burger:before{
+        top: 0;
+    }
+    .header_burger:after{
+        bottom: 0;
+
+    }
+    .header_burger.active span{
+        transform: scale(0);
+    }
+    .header_burger.active:before{
+        transform: rotate(45deg);
+        top: 9px;
+    }
+    .header_burger.active::after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+    .header_menu{
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        transition: all 0.3s ease 0s;
+        background-color: teal;
+	opacity: 0.9;
+        padding: 70px 10px 20px 10px;
+    }
+    .header_menu.active{
+        top: 0;
+    }
+    .header_list{
+        display: block;
+    }
+    .header_list li{
+        margin: 0px 0px 20px 0px;
+    }
+    .header_link{
+        font-size: 24px;
+    }
+}
+
+
+.content{
+    padding: 100px 0px 0px 0px;
+
+
+}
+.content .date_time{
+    background-color: turquoise;
+    height: 20px;
+    width: 155px;
+    float: right;
+    border-radius: 10px;
+    border: 2px solid rgb(252, 50, 201)
+    
+    
+}
+
+/* ******DARK/LIGHT theme */
+/* #container_dark{ */
+    /* width: 100%;
+    height: 100vh; */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+/* } */
+/* .switch{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+.switch input{
+    display: none;
+}
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ccc;
+    border-radius: 34px;
+    transition: .4s;
+}
+.slider::before{
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    left: 4px;
+    bottom: 4px;
+    background: #fff;
+    border-radius: 50%;
+    transition: .4s;
+
+}
+input:checked + .slider{
+    background: #b892ff;
+}
+input:checked+.slider::before{
+    transform: translateX(26px);
+}
+.dark-mode{
+    background: #0b0a14;
+} */
+
+
+
+
+
+
+.content_text{
+    font-size: 18px;
+    line-height: 20px;
+
+}
+@media(max-width:767px){
+    .content{
+        padding: 70px 0px 0px 0px;
+    }
+    
+}
+.form_units{
+    background-color: rgb(241, 241, 226);
+    height:50px;
+    width: auto;
+    text-align: center;
+    text-decoration: ivory;
+    padding: 13px;
+}
+.form_units label{
+    color: rgb(25, 180, 228);
+}
+
+
+
+
+
+
+/* Style footer */
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+    
+    /* flex-shrink: 0; */
+    /* width: 98%;
+    float: left;
+    /* padding: 1%;  */
+    padding: 1%;
+
+    background-color:rgb(124, 187, 230);
+    border-top: 1px solid rgb(134, 116, 116);
+    margin-top: 10px;
+}
+footer #social{
+    float: left;
+    width: 50%;
+}
+footer #rights {
+    float: right;
+    width: 50%;
+    text-align: right;
+    font-size: 1.1em;
+}
+footer #social img{
+    width: 30px;
+    height: 30px;
+    float: left;
+
+}
+footer #map{
+    float:none;
+    width: 50%;
+    text-align: center;
+}
+/* *******Content munu SEARCH********** */
+.form_item{
+    height: 50px;
+    width: auto;
+    background-color: yellow;
+    padding: 10px;
+    margin-bottom: 3px;
+    border-radius: 10px;
+}
+.form_item input{
+    border:2px solid bisque ;
+    font-size: 20px;
+}
+.form_item label{
+    font-size: 20px;
+}
+
+
+
+
+/* ///////////  COOKIES   ///////////// */
+.cookie_block{
+    width: auto;
+    height: 30px;
+    border: 5px solid rgb(146, 111, 241);
+    
+    text-align: center;
+    border-radius: 5px;
+}
+.cookie_block button{
+   background-color: tan;
+   color: rgb(24, 23, 22);
+   width: 30px;
+   height: 15px;
+}
+
